@@ -1,3 +1,13 @@
+//-------------------------create paddin-bottom for body-------------------------------------------------------------------------------//
+
+const body = document.querySelector('body');
+const footer = document.querySelector('footer');
+
+body.style.paddingBottom = footer.offsetHeight + 'px';
+
+window.onresize = () => body.style.paddingBottom = footer.offsetHeight + 'px';
+
+
 //-------------------------create bones-------------------------------------------------------------------------------//
 
 (() => {
@@ -65,3 +75,13 @@ linkBleach()
 let linkBleachInt = setInterval(linkBleach, 12000)
 
 
+//----------------------------mobile menu------------------------------------------------------//
+
+const mobileMenu = document.querySelector('.mobile-menu');
+const headerNav = document.querySelector('.header__nav');
+
+mobileMenu.onclick = () => {
+    mobileMenu.classList.toggle('active')
+    headerNav.classList.toggle('active')
+    mobileMenu.classList.contains('active') ? mobileMenu.innerHTML = 'закрыть' : mobileMenu.innerHTML = 'МЕНЮ';
+}

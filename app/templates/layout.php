@@ -32,14 +32,17 @@
                 <div class="heder__nav-item button">
                     <a href="#" class="header__nav-link">ОБО МНЕ</a>
                     <div class="header__nav-bone <?= $page === 'about' ? '' : 'hide' ?>"></div>
+                    <div class="maitres2"></div>
                 </div>
-                <div class="heder__nav-item button">
+                <div class="heder__nav-item button" style="position:relative;">
                     <a href="#" class="header__nav-link">ЗАКАЗ САЙТА</a>
                     <div class="header__nav-bone <?= $page === 'order' ? '' : 'hide' ?>"></div>
+                    <div class="maitres"></div>
                 </div>
             </nav>
         </div>
     </div>
+    <div class="mobile-menu">МЕНЮ</div>
 </header>
 <?= $pageContent ?>
 <footer class="footer">

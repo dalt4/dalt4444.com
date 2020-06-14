@@ -1,5 +1,16 @@
 'use strict';
 
+//-------------------------create paddin-bottom for body-------------------------------------------------------------------------------//
+
+var body = document.querySelector('body');
+var footer = document.querySelector('footer');
+
+body.style.paddingBottom = footer.offsetHeight + 'px';
+
+window.onresize = function () {
+    return body.style.paddingBottom = footer.offsetHeight + 'px';
+};
+
 //-------------------------create bones-------------------------------------------------------------------------------//
 
 (function () {
@@ -64,3 +75,14 @@ function linkBleach() {
 linkBleach();
 
 var linkBleachInt = setInterval(linkBleach, 12000);
+
+//----------------------------mobile menu------------------------------------------------------//
+
+var mobileMenu = document.querySelector('.mobile-menu');
+var headerNav = document.querySelector('.header__nav');
+
+mobileMenu.onclick = function () {
+    mobileMenu.classList.toggle('active');
+    headerNav.classList.toggle('active');
+    mobileMenu.classList.contains('active') ? mobileMenu.innerHTML = 'закрыть' : mobileMenu.innerHTML = 'МЕНЮ';
+};

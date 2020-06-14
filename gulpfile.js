@@ -88,7 +88,7 @@ gulp.task('code', function () {
 gulp.task('watch', function () {
     gulp.watch('app/styles/*.scss', gulp.parallel('sass'));
     gulp.watch('app/**/*.php', gulp.parallel('code'));
-    gulp.watch('app/es6/*.js', gulp.parallel('scripts'));
+    gulp.watch('app/scripts/es6/*.js', gulp.parallel('scripts'));
 });
 
 gulp.task('default', gulp.parallel('sass', 'scripts', 'browser-sync', 'watch'));

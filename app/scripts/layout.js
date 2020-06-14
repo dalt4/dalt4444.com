@@ -1,16 +1,5 @@
 'use strict';
 
-//-------------------------create paddin-bottom for body-------------------------------------------------------------------------------//
-
-var body = document.querySelector('body');
-var footer = document.querySelector('footer');
-
-body.style.paddingBottom = footer.offsetHeight + 'px';
-
-window.onresize = function () {
-    return body.style.paddingBottom = footer.offsetHeight + 'px';
-};
-
 //-------------------------create bones-------------------------------------------------------------------------------//
 
 (function () {

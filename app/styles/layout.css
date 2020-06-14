@@ -29,20 +29,32 @@
   src: local("Cormorant Garamond Bold"), local("CormorantGaramond-Bold"), url("../fonts/cormorant-garamond-v7-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/cormorant-garamond-v7-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/cormorant-garamond-v7-latin_cyrillic-700.woff") format("woff"), url("../fonts/cormorant-garamond-v7-latin_cyrillic-700.ttf") format("truetype"), url("../fonts/cormorant-garamond-v7-latin_cyrillic-700.svg#CormorantGaramond") format("svg");
   /* Legacy iOS */ }
 
-html, body {
-  width: 100%;
-  height: 100%; }
+html {
+    width: 100%;
+    height: 100%;
+}
 
 body {
-  position: relative;
-  margin: 0;
-  overflow-x: hidden;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Cormorant Garamond', serif;
-  color: white;
-  font-size: 20px;
-  padding-bottom: 150px; }
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+    color: white;
+    font-size: 20px;
+}
 
 * {
   -webkit-box-sizing: inherit;
@@ -322,14 +334,13 @@ a {
   display: none; }
 
 .footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  min-height: 150px;
-  background: black;
-  color: grey;
-  font-weight: 300; }
+    width: 100%;
+    margin-top: auto;
+    min-height: 150px;
+    background: black;
+    color: grey;
+    font-weight: 300;
+}
 
 .footer-content {
   min-height: 100%;

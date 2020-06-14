@@ -1,13 +1,3 @@
-//-------------------------create paddin-bottom for body-------------------------------------------------------------------------------//
-
-const body = document.querySelector('body');
-const footer = document.querySelector('footer');
-
-body.style.paddingBottom = footer.offsetHeight + 'px';
-
-window.onresize = () => body.style.paddingBottom = footer.offsetHeight + 'px';
-
-
 //-------------------------create bones-------------------------------------------------------------------------------//
 
 (() => {

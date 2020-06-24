@@ -30,31 +30,32 @@
   /* Legacy iOS */ }
 
 html {
-    width: 100%;
-    height: 100%;
-}
+  width: 100%;
+  height: 100%; }
 
 body {
-    position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-family: 'Cormorant Garamond', serif;
-    color: white;
-    font-size: 20px;
-}
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Cormorant Garamond', serif;
+  color: white;
+  font-size: 20px; }
+
+body.active {
+  overflow: hidden; }
 
 * {
   -webkit-box-sizing: inherit;
@@ -68,6 +69,11 @@ a {
   max-width: 1560px;
   margin: 0 auto;
   padding: 0 20px;
+  height: 100%; }
+
+.wrapper_full {
+  max-width: 100vw;
+  margin: 0 auto;
   height: 100%; }
 
 .maitres,
@@ -334,13 +340,12 @@ a {
   display: none; }
 
 .footer {
-    width: 100%;
-    margin-top: auto;
-    min-height: 150px;
-    background: black;
-    color: grey;
-    font-weight: 300;
-}
+  width: 100%;
+  margin-top: auto;
+  min-height: 150px;
+  background: black;
+  color: grey;
+  font-weight: 300; }
 
 .footer-content {
   min-height: 100%;

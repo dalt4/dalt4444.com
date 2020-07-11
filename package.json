@@ -26,5 +26,8 @@
     "node-sass": "^4.13.1"
   },
   "author": "Vasiliy Anikin",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
 }

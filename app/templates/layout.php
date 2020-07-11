@@ -18,15 +18,15 @@
             </div>
             <nav class="header__nav">
                 <div class="heder__nav-item button">
-                    <a href="#" class="header__nav-link">ГЛАВНАЯ</a>
+                    <a href="index.php" class="header__nav-link">ГЛАВНАЯ</a>
                     <div class="header__nav-bone <?= $page === 'main' ? '' : 'hide' ?>"></div>
                 </div>
                 <div class="heder__nav-item button">
-                    <a href="#" class="header__nav-link">ПОРТФОЛИО</a>
+                    <a href="portfolio.php" class="header__nav-link">ПОРТФОЛИО</a>
                     <div class="header__nav-bone <?= $page === 'portfolio' ? '' : 'hide' ?>"></div>
                 </div>
                 <div class="heder__nav-item button">
-                    <a href="#" class="header__nav-link">СЕРТИФИКАТЫ</a>
+                    <a href="certificates.php" class="header__nav-link">СЕРТИФИКАТЫ</a>
                     <div class="header__nav-bone <?= $page === 'certificates' ? '' : 'hide' ?>"></div>
                 </div>
                 <div class="heder__nav-item button">
@@ -35,7 +35,7 @@
                     <div class="maitres2"></div>
                 </div>
                 <div class="heder__nav-item button" style="position:relative;">
-                    <a href="#" class="header__nav-link">ЗАКАЗ САЙТА</a>
+                    <a href="#" class="header__nav-link">ЗАКАЗАТЬ</a>
                     <div class="header__nav-bone <?= $page === 'order' ? '' : 'hide' ?>"></div>
                     <div class="maitres"></div>
                 </div>
@@ -45,7 +45,7 @@
     <div class="mobile-menu">МЕНЮ</div>
 </header>
 <?= $pageContent ?>
-<footer class="footer">
+<footer class="footer" id="footer">
     <div class="wrapper">
         <div class="footer-content">
             <section class="footer__section">

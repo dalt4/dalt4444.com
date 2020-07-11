@@ -1,0 +1,285 @@
+.wrapper_full {
+  overflow: hidden;
+}
+
+header, footer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  transition: .4s ease-in-out;
+  transform: scale(1) translateY(0);
+}
+
+footer {
+  top: unset;
+  bottom: 0;
+}
+
+.zoomIn {
+  transform: scale(2) translateY(-100%);
+}
+
+.zoomInDown {
+  transform: scale(2) translateY(100%);
+}
+
+.main {
+  background: unset;
+  position: relative;
+  min-height: 300px;
+}
+
+.up {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 75px;
+  height: 50px;
+  z-index: 4;
+}
+
+.aboutCert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(1);
+  width: 70vw;
+  height: 30vh;
+  text-align: center;
+  transition: .4s ease-in-out;
+  font-size: 26px;
+  font-weight: 700;
+  text-shadow: 1px 2px white;
+  letter-spacing: 1px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.aboutCert span {
+  text-shadow: 1px 1px red;
+}
+
+.zoomOut_0 {
+  top: 10%;
+  transform: translateX(-50%) translateY(-50%) scale(.01);
+  visibility: hidden;
+}
+
+.parallax {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200vh;
+}
+
+.montain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("../img/certificate/motain/m_1.png") no-repeat center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.montain2 {
+  top: unset;
+  left: unset;
+  right: 0;
+  bottom: 0;
+  background: url("../img/certificate/motain/m_2.png") no-repeat 100% 100%;
+  background-size: 45% auto;
+  z-index: 2;
+}
+
+.montain3 {
+  top: unset;
+  left: 0;
+  bottom: 0;
+  background: url("../img/certificate/motain/m_3.png") no-repeat 0 100%;
+  z-index: 3;
+  background-size: 100% auto;
+}
+
+.fog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("../img/certificate/motain/fog_1.png") no-repeat center;
+  background-size: cover;
+  z-index: 4;
+}
+
+.fog2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("../img/certificate/motain/fog_2.png") 0 0/ 100vw;
+  animation: fog2 infinite 60s forwards linear;
+  filter: blur(50%);
+  opacity: .5;
+  z-index: 4;
+}
+
+@keyframes fog2 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100vw 0;
+  }
+}
+
+.content {
+  position: relative;
+  margin-top: -120vh;
+  width: 100%;
+  z-index: 1;
+}
+
+.cert {
+  width: 50vw;
+  height: 35vw;
+  margin: 20px auto;
+  background: silver;
+  transition: .4s;
+  filter: grayscale(100%) contrast(200%);
+  position: relative;
+}
+
+.certV {
+  width: 35vw;
+  height: 50vw;
+  margin: 20px auto;
+  background: silver;
+  filter: grayscale(100%) contrast(200%);
+  background: no-repeat 0 0/100%;
+}
+
+.cert_hover {
+  filter: grayscale(0%) contrast(100%);
+  transform: scale(1.3);
+  z-index: 1;
+}
+
+
+.cert1 {
+  background: url("../img/certificate/certificates/1(140704a6420mgtu).jpg") no-repeat 0 0/100%;
+}
+
+.cert2 {
+  background: url("../img/certificate/certificates/2(140704ws2008).jpg") no-repeat 0 0/100%;
+}
+
+.cert3 {
+  background: url("../img/certificate/certificates/3(140704ws2008m).jpg") no-repeat 0 0/100%;
+}
+
+.cert4 {
+  background: url("../img/certificate/certificates/4(150406Windows8).jpg") no-repeat 0 0/100%;
+}
+
+.cert5 {
+  background: url("../img/certificate/certificates/5(150414Windows10).jpg") no-repeat 0 0/100%;
+}
+
+.cert6 {
+  background: url("../img/certificate/certificates/6(150420domain).jpg") no-repeat 0 0/100%;
+}
+
+.cert7 {
+  background: url("../img/certificate/certificates/7(150615).jpg") no-repeat 0 0/100%;
+}
+
+.cert8 {
+  background: url("../img/certificate/certificates/8(150618domain2).jpg") no-repeat 0 0/100%;
+}
+
+.cert9 {
+  background: url("../img/certificate/certificates/9(151111win7).jpg") no-repeat 0 0/100%;
+}
+
+.cert10 {
+  background: url("../img/certificate/certificates/10(181204Python).jpg") no-repeat 0 0/100%;
+}
+
+.cert11 {
+  background: url("../img/certificate/certificates/11(190115PythonDjango).jpg") no-repeat 0 0/100%;
+}
+
+.cert12 {
+  background: url("../img/certificate/certificates/12(190116WindowsServer2012R2).jpg") no-repeat 0 0/100%;
+}
+
+.cert13 {
+  background: url("../img/certificate/certificates/13(190622jquery).jpg") no-repeat 0 0/100%;
+}
+
+.cert14 {
+  background: url("../img/certificate/certificates/14(190911php5.2).jpg") no-repeat 0 0/100%;
+}
+
+.cert15 {
+  background: url("../img/certificate/certificates/15(191006php1).jpg") no-repeat 0 0/100%;
+}
+
+.cert16 {
+  background: url("../img/certificate/certificates/16(191006PHP1rus).jpg") no-repeat 0 0/100%;
+}
+
+.cert17 {
+  background: url("../img/certificate/certificates/17(191016eng).jpg") no-repeat 0 0/100%;
+}
+
+.cert18 {
+  background: url("../img/certificate/certificates/18(191016html&css).jpg") no-repeat 0 0/100%;
+}
+
+.cert19 {
+  background: url("../img/certificate/certificates/19(191016html).jpg") no-repeat 0 0/100%;
+}
+
+.cert20 {
+  background: url("../img/certificate/certificates/20(191016PHP).jpg") no-repeat 0 0/100%;
+}
+
+.cert21 {
+  background: url("../img/certificate/certificates/21(191016testgeekBrain).jpg") no-repeat 0 0/100%;
+}
+
+.cert22 {
+  background: url("../img/certificate/certificates/22(191103VasiliyAnikin155887).jpg") no-repeat 0 0/100%;
+}
+
+.cert23 {
+  background: url("../img/certificate/certificates/23(191126js).jpg") no-repeat 0 0/100%;
+}
+
+
+//-------------------------------------media 767px-------------------------------------------------------------------//
+
+@media screen and (max-width: 767px) {
+  footer {
+    position: relative;
+    transform: none;
+  }
+  .zoomInDown {
+    transform: none;
+  }
+
+  .aboutCert {
+    font-size: 18px;
+  }
+
+}

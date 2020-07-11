@@ -69,7 +69,8 @@ a {
   max-width: 1560px;
   margin: 0 auto;
   padding: 0 20px;
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
 
 .wrapper_full {
   max-width: 100vw;
@@ -438,7 +439,7 @@ a {
     to {
       width: 350px; } }
   .button {
-    font-size: 15px; }
+    font-size: 13px; }
   .footer__section {
     width: 50%; }
   .footer__section:nth-child(2)::after {

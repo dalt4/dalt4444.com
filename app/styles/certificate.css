@@ -5,7 +5,7 @@ header, footer {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 5;
+  z-index: 10;
   -webkit-transition: .4s ease-in-out;
   -o-transition: .4s ease-in-out;
   transition: .4s ease-in-out;
@@ -77,8 +77,9 @@ footer {
           flex-direction: column;
   z-index: 5; }
 
-.aboutCert span {
-  text-shadow: 1px 1px red; }
+.aboutCert span.active {
+  text-shadow: 1px 1px 5px black;
+  color: white; }
 
 .zoomOut_0 {
   top: 10%;
@@ -160,37 +161,35 @@ footer {
 .content {
   position: relative;
   margin-top: -120vh;
+  margin-bottom: 25vh;
   width: 100%;
   z-index: 1; }
 
 .cert {
+  position: relative;
   width: 50vw;
   height: 35vw;
-  margin: 20px auto;
+  margin: 40px auto;
   background: silver;
-  -webkit-transition: .4s;
-  -o-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .4s linear;
+  -o-transition: .4s linear;
+  transition: .4s linear;
   -webkit-filter: grayscale(100%) contrast(200%);
           filter: grayscale(100%) contrast(200%);
-  position: relative; }
+  opacity: .8; }
 
 .certV {
   width: 35vw;
-  height: 50vw;
-  margin: 20px auto;
-  background: silver;
-  -webkit-filter: grayscale(100%) contrast(200%);
-          filter: grayscale(100%) contrast(200%);
-  background: no-repeat 0 0/100%; }
+  height: 50vw; }
 
-.cert_hover {
+.cert.active {
   -webkit-filter: grayscale(0%) contrast(100%);
           filter: grayscale(0%) contrast(100%);
-  -webkit-transform: scale(1.3);
-      -ms-transform: scale(1.3);
-          transform: scale(1.3);
-  z-index: 1; }
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+  z-index: 1;
+  opacity: 1; }
 
 .cert1 {
   background: url("../img/certificate/certificates/1(140704a6420mgtu).jpg") no-repeat 0 0/100%; }
@@ -272,4 +271,10 @@ footer {
         -ms-transform: none;
             transform: none; }
   .aboutCert {
-    font-size: 18px; } }
+    font-size: 18px; }
+  .cert {
+    width: 80vw;
+    height: 56vw; }
+  .certV {
+    width: 56vw;
+    height: 80vw; } }

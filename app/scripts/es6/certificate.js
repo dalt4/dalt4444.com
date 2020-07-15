@@ -1,19 +1,19 @@
 $(window).on('scroll', function () {
-    var scroll = $(this).scrollTop();
-    var width = $(this).outerWidth();
-    var heightContent = $('.content').outerHeight();
-    var heightParallax = $('.parallax').outerHeight();
-    var percentScroll = scroll / heightContent * 100;
-    var percentScrollParallax = scroll / heightParallax * 100;
-    var opacity = 1 - 1 / 100 * percentScrollParallax;
-    var zoom1 = 1 + (width / 10000 * percentScrollParallax);
-    var zoom2 = 1 + (width / 5000000 * percentScroll);
-    var zoom3 = 1 + (width / 500000 * percentScrollParallax);
-    var zoom4 = 1 + (width / 100000 * percentScrollParallax);
-    var slide1 = width / 2000 * percentScrollParallax;
-    var slide2 = width / 1500 * percentScrollParallax;
-    var header = $('header');
-    var footer = $('footer');
+    let scroll = $(this).scrollTop();
+    let width = $(this).outerWidth();
+    let heightContent = $('.content').outerHeight();
+    let heightParallax = $('.parallax').outerHeight();
+    let percentScroll = scroll / heightContent * 100;
+    let percentScrollParallax = scroll / heightParallax * 100;
+    let opacity = 1 - 1 / 100 * percentScrollParallax;
+    let zoom1 = 1 + (width / 10000 * percentScrollParallax);
+    let zoom2 = 1 + (width / 5000000 * percentScroll);
+    let zoom3 = 1 + (width / 500000 * percentScrollParallax);
+    let zoom4 = 1 + (width / 100000 * percentScrollParallax);
+    let slide1 = width / 2000 * percentScrollParallax;
+    let slide2 = width / 1500 * percentScrollParallax;
+    let header = $('header');
+    let footer = $('footer');
 
 
     if (scroll > 0 && !header.hasClass('zoomIn')) {
@@ -32,24 +32,28 @@ $(window).on('scroll', function () {
         footer.removeClass('zoomInDown')
     }
 
-    // if (scroll > heightParallax) {
-    //     $('.content').css('z-index', '2')
-    // }
-
     $('.fog').css({'transform': 'scale(' + zoom1 + ')', 'opacity': opacity});
     $('.montain1').css('transform', 'scale(' + zoom2 + ')');
     $('.montain2').css('transform', 'translateX(' + slide1 + 'px) scale(' + zoom3 + ')');
     $('.montain3').css('transform', 'translateX(' + slide2 + 'px) scale(' + zoom4 + ')');
 
-
 });
 
+window.onscroll = () => {
+    let cert = document.querySelectorAll('.cert');
+    const montain = document.querySelector('.montain')
+    cert.forEach((item, i) => {
+        item.getBoundingClientRect().top < montain.clientHeight / 2 && item.getBoundingClientRect().top > montain.clientHeight / 20 ?
+            item.classList.add('active') : item.classList.remove('active');
+    })
+}
 
-$('.cert').on('mouseover', function () {
-    $(this).toggleClass('cert_hover')
-    console.log(1);
-}).on('mouseleave', function () {
-    if ($(this).hasClass('cert_hover'))
-        $(this).removeClass('cert_hover')
-});
+const aboutCertSpans = document.querySelectorAll('.aboutCert span');
 
+let getRandomInt = function (max) {
+    return Math.floor(Math.random() * Math.floor(max));
+};
+
+let spanInterval = setInterval(() => {
+    aboutCertSpans[getRandomInt(4)].classList.toggle('active')
+}, 200)

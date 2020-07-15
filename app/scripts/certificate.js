@@ -33,19 +33,26 @@ $(window).on('scroll', function () {
         footer.removeClass('zoomInDown');
     }
 
-    // if (scroll > heightParallax) {
-    //     $('.content').css('z-index', '2')
-    // }
-
     $('.fog').css({ 'transform': 'scale(' + zoom1 + ')', 'opacity': opacity });
     $('.montain1').css('transform', 'scale(' + zoom2 + ')');
     $('.montain2').css('transform', 'translateX(' + slide1 + 'px) scale(' + zoom3 + ')');
     $('.montain3').css('transform', 'translateX(' + slide2 + 'px) scale(' + zoom4 + ')');
 });
 
-$('.cert').on('mouseover', function () {
-    $(this).toggleClass('cert_hover');
-    console.log(1);
-}).on('mouseleave', function () {
-    if ($(this).hasClass('cert_hover')) $(this).removeClass('cert_hover');
-});
+window.onscroll = function () {
+    var cert = document.querySelectorAll('.cert');
+    var montain = document.querySelector('.montain');
+    cert.forEach(function (item, i) {
+        item.getBoundingClientRect().top < montain.clientHeight / 2 && item.getBoundingClientRect().top > montain.clientHeight / 20 ? item.classList.add('active') : item.classList.remove('active');
+    });
+};
+
+var aboutCertSpans = document.querySelectorAll('.aboutCert span');
+
+var getRandomInt = function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+};
+
+var spanInterval = setInterval(function () {
+    aboutCertSpans[getRandomInt(4)].classList.toggle('active');
+}, 200);

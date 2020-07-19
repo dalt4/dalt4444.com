@@ -131,7 +131,7 @@
 .section-title {
   font-size: 30px;
   font-weight: 300;
-  padding-left: 50px;
+  padding: 0 50px;
 }
 
 
@@ -1151,7 +1151,8 @@
 
 .menu__item2 {
   position: relative;
-  width: 169px;
+  left: 1px;
+  width: 170px;
   height: 308px;
   overflow: hidden;
   padding: 0 10px;
@@ -1170,25 +1171,25 @@
 
 .menu__item2-burger {
   position: relative;
-  top: -30px;
-  width: 60px;
-  height: 60px;
+  top: -15px;
+  width: 40px;
+  height: 40px;
   margin: 0 auto;
   background: black linear-gradient(to bottom,
           white 1px,
-          transparent 2px,
+          transparent 1px,
+          transparent 4.5px,
+          white 4.5px,
+          white 5.5px,
+          transparent 5.5px,
           transparent 9px,
-          white 9px,
-          white 11px,
-          transparent 11px,
-          transparent 18px,
-          white 18px
-  ) no-repeat center 31px /26px 20px;
+          white 9px
+  ) no-repeat center 17px /13px 10px;
   border-radius: 50%;
   z-index: 3;
   transition: .2s all linear;
   text-align: center;
-  padding-top: 31px;
+  padding-top: 16px;
   color: white;
   font-size: 0;
   line-height: 26px;
@@ -1209,7 +1210,8 @@
 
 .menu__item2-burger.active {
   background: black;
-  font-size: 26px;
+  font-size: 14px;
+  padding-bottom: 3px;
 }
 
 .menu__item2-burger.active::after {
@@ -1527,6 +1529,17 @@
 //-------------------------------------media 767px-------------------------------------------------------------------//
 
 @media screen and (max-width: 767px) {
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    z-index: 10;
+    transition: .4s all linear;
+  }
+
   .main__flag {
     top: 130px;
     z-index: 8;
@@ -1553,5 +1566,74 @@
     top: calc(-100vw / 16 * 9);
   }
 
+  .fullScreen {
+    display: none;
+  }
 
+  .replay {
+    right: 10px;
+  }
+
+  .animation-clock {
+    width: 20vw;
+    height: 42.4vw;
+  }
+
+  .animation-clock__back {
+    width: 12vw;
+    height: 20vw;
+  }
+
+  .animation-clock__ticker {
+    width: 4vw;
+    height: 12vw;
+  }
+
+  .animation-clock__h-arrow {
+    width: 1.2vw;
+    height: 3.6vw;
+  }
+
+  .animation-clock__m-arrow {
+    width: .4vw;
+    height: 4vw;
+  }
+
+  .book-item {
+    transform: translateX(-50%);
+    width: 40vw;
+    height: 60vw;
+    font-size: 3.4vw;
+  }
+
+  .book-scene:hover .book-item {
+    transform: translateX(-50%);
+  }
+
+  .book-item__flipbook {
+    width: 80vw;
+    height: 60vw;
+  }
+
+  .book-item__side {
+    width: 60vw;
+  }
+
+  .video__background {
+    height: 200vw;
+    width: 100vw;
+  }
+
+  .buttons__box {
+    height: 100px;
+  }
+
+  .buttons__line {
+    margin: 0;
+  }
+
+  .menu__box:last-child,
+  .menu__box:nth-child(12) {
+    height: 300px;
+  }
 }

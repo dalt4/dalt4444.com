@@ -1,5 +1,5 @@
-import * as THREE from '../libs/three.module.js';
-import {OrbitControls} from '../libs/OrbitControls.js';
+import * as THREE from '../../libs/three.module.js';
+import {OrbitControls} from '../../libs/OrbitControls.js';
 
 var ballCoverButton = document.querySelector('.ball__cover-button');
 var ballScene = document.querySelector('.ball-scene');

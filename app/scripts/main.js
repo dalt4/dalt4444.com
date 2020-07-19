@@ -1,6 +1,12 @@
 'use strict';
 
 var body = document.querySelector('body');
+var indexHeader = document.querySelector('.header');
+var header__intro = document.querySelector('.header__intro');
+
+//------------------------------------------------mobil header--------------------------------------------------------//
+
+body.style.paddingTop = window.innerWidth <= 767 ? indexHeader.clientHeight + 'px' : '';
 
 //-----------------------------------------------main header and flag-------------------------------------------------//
 
@@ -277,8 +283,10 @@ function createFlipbook() {
         $('#flipbook').turn('page', 1);
         bookItem.style.left = '';
     };
-    $("#flipbook").bind("turned", function (event, page, view) {
-        bookItem.style.left = page === 1 ? '' : '10vw';
+    $("#flipbook").bind("turned", function (event, page) {
+        bookItem.style.left = page === 1 ? '' : function () {
+            return window.innerWidth <= 767 ? '20vw' : '10vw';
+        }();
     });
 }
 

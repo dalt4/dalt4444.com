@@ -206,24 +206,26 @@
             transform: translateZ(-500px) rotateY(360deg); } }
 
 .portfolio__item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-      -ms-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
-  width: 500px;
-  max-width: 95vw;
-  height: 80vh;
-  -webkit-transition: .4s .6s all ease-out;
-  -o-transition: .4s .6s all ease-out;
-  transition: .4s .6s all ease-out;
-  background: silver; }
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    width: 500px;
+    max-width: 80vw;
+    height: 80vh;
+    -webkit-transition: .4s .6s all ease-out;
+    -o-transition: .4s .6s all ease-out;
+    transition: .4s .6s all ease-out;
+    background: silver;
+}
 
 .portfolio__item.active {
-  width: 600px;
-  max-width: 98vw; }
+    width: 600px;
+    max-width: 90vw;
+}
 
 .portfolio__item-pic {
   max-width: 100%;
@@ -239,12 +241,21 @@
 
 .portfolio__item:nth-child(3) {
   -webkit-transform: translateY(-50%) translateX(-50%) rotateY(-webkit-calc(360deg / 5 * 2)) translateZ(500px);
-          transform: translateY(-50%) translateX(-50%) rotateY(calc(360deg / 5 * 2)) translateZ(500px); }
+    transform: translateY(-50%) translateX(-50%) rotateY(calc(360deg / 5 * 2)) translateZ(500px);
+}
 
 .portfolio__item:nth-child(4) {
-  -webkit-transform: translateY(-50%) translateX(-50%) rotateY(-webkit-calc(360deg / 5 * 3)) translateZ(500px);
-          transform: translateY(-50%) translateX(-50%) rotateY(calc(360deg / 5 * 3)) translateZ(500px); }
+    -webkit-transform: translateY(-50%) translateX(-50%) rotateY(-webkit-calc(360deg / 5 * 3)) translateZ(500px);
+    transform: translateY(-50%) translateX(-50%) rotateY(calc(360deg / 5 * 3)) translateZ(500px);
+}
 
 .portfolio__item:nth-child(5) {
-  -webkit-transform: translateY(-50%) translateX(-50%) rotateY(-webkit-calc(360deg / 5 * 4)) translateZ(500px);
-          transform: translateY(-50%) translateX(-50%) rotateY(calc(360deg / 5 * 4)) translateZ(500px); }
+    -webkit-transform: translateY(-50%) translateX(-50%) rotateY(-webkit-calc(360deg / 5 * 4)) translateZ(500px);
+    transform: translateY(-50%) translateX(-50%) rotateY(calc(360deg / 5 * 4)) translateZ(500px);
+}
+
+@media screen and (max-width: 767px) {
+    .portfolio__close-item {
+        left: 90%;
+    }
+}

@@ -341,9 +341,7 @@
                             <div class="menu__item2-burger">
                                 X
                             </div>
-                            <p class="menu__item2-description">
-                                Осторожно со ссылками - они настоящие)))
-                            </p>
+
                             <div class="menu__item2-links">
                                 <div class="menu__item2-link">ГЛАВНАЯ</div>
                                 <div class="menu__item2-link">ПОРТФОЛИО</div>
@@ -383,5 +381,5 @@
     <script src="../libs/jquery.vide.min.js"></script>
     <script src="../libs/turn.min.js"></script>
     <script src="../scripts/main.js"></script>
-    <script type="module" src="../scripts/dalt4444.module.js"></script>
+    <script type="module" src="../scripts/modules/dalt4444.module.js"></script>
 </main>

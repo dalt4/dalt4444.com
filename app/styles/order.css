@@ -1,0 +1,186 @@
+.order__nav {
+    position: relative;
+    background: #181818;
+}
+
+.order__nav-items {
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.order__nav-item,
+.order__form input[type='submit'] {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    margin: 20px;
+    line-height: 50px;
+    font-size: inherit;
+    font-family: inherit;
+    letter-spacing: 2px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-box-shadow: black 0 0 5px;
+    box-shadow: black 0 0 5px;
+    background: red;
+    cursor: pointer;
+    color: #181818;
+    -webkit-transition: .4s linear;
+    -o-transition: .4s linear;
+    transition: .4s linear;
+    -webkit-transform-origin: 25px 25px;
+    -ms-transform-origin: 25px 25px;
+    transform-origin: 25px 25px;
+}
+
+.order__nav-item:hover,
+.order__form input[type='submit']:hover {
+    -webkit-box-shadow: white 0 0 5px;
+    box-shadow: white 0 0 5px;
+    color: white;
+}
+
+.order__list {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    background: white;
+    -webkit-transition: .4s ease-out;
+    -o-transition: .4s ease-out;
+    transition: .4s ease-out;
+    text-align: center;
+    color: #181818;
+    overflow-y: auto;
+}
+
+.order__list input {
+    margin: 10px;
+    border: none;
+    border-bottom: 1px #181818 solid;
+}
+
+.order__list input[type='number'] {
+    width: 50px;
+    text-align: center;
+}
+
+.order__list span,
+.order__list sup {
+    color: red;
+}
+
+.order__list.active {
+    right: 0;
+}
+
+.order__close-item {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    height: 25px;
+    width: 25px;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    cursor: pointer;
+    -webkit-transition: .2s linear;
+    -o-transition: .2s linear;
+    transition: .2s linear;
+}
+
+.order__close-item:hover {
+    -webkit-transform: rotateZ(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotateZ(90deg);
+}
+
+.order__close-item::before,
+.order__close-item::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #181818;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotateZ(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotateZ(45deg);
+}
+
+.order__close-item::after {
+    -webkit-transform: rotateZ(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotateZ(-45deg);
+}
+
+.order__list-title {
+    color: #181818;
+    letter-spacing: 1px;
+}
+
+.order__form,
+.order__form fieldset {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.order__form fieldset {
+    margin: 10px 10px 40px;
+    width: 400px;
+    border: double;
+}
+
+.order__form-wishes {
+    border: double;
+    min-width: 400px;
+    min-height: 150px;
+    height: auto;
+    padding: 10px;
+}
+
+input:active,
+input:focus,
+.order__form-wishes:active,
+.order__form-wishes:focus {
+    outline: none;
+}

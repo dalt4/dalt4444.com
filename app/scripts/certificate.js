@@ -17,20 +17,24 @@ $(window).on('scroll', function () {
     var header = $('header');
     var footer = $('footer');
 
-    if (scroll > 0 && !header.hasClass('zoomIn')) {
-        $('.fog2').addClass('hide');
-        header.addClass('zoomIn');
-        $('.aboutCert').addClass('zoomOut_0');
-    } else if (scroll === 0 && header.hasClass('zoomIn')) {
-        header.removeClass('zoomIn');
-        $('.aboutCert').removeClass('zoomOut_0');
-        $('.fog2').removeClass('hide');
-    }
+    if (window.innerWidth > 767) {
+        if (scroll > 0 && !header.hasClass('zoomIn')) {
+            $('.fog2').addClass('hide');
+            header.addClass('zoomIn');
+            $('.aboutCert').addClass('zoomOut_0');
+        } else if (scroll === 0 && header.hasClass('zoomIn')) {
+            header.removeClass('zoomIn');
+            $('.aboutCert').removeClass('zoomOut_0');
+            $('.fog2').removeClass('hide');
+        }
 
-    if (scroll > 0 && !footer.hasClass('zoomInDown')) {
-        footer.addClass('zoomInDown');
-    } else if (scroll === 0 && footer.hasClass('zoomInDown')) {
-        footer.removeClass('zoomInDown');
+        if (scroll > 0 && !footer.hasClass('zoomInDown')) {
+            footer.addClass('zoomInDown');
+        } else if (scroll === 0 && footer.hasClass('zoomInDown')) {
+            footer.removeClass('zoomInDown');
+        }
+    } else {
+        pageYOffset > 0 ? $('.aboutCert').addClass('zoomOut_0') : $('.aboutCert').removeClass('zoomOut_0');
     }
 
     $('.fog').css({ 'transform': 'scale(' + zoom1 + ')', 'opacity': opacity });

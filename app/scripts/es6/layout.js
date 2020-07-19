@@ -25,10 +25,6 @@
 
 const stitle = document.querySelector('title');
 let title2Interval;
-// let titleText = stitle.innerText;
-// let textArr = titleText.split('');
-// let textArrSlice = textArr.slice(0, 3);
-// console.log(textArrSlice);
 
 let titleInterval = setInterval(`stitle.innerText = '(-).(o)'`, 2000);
 setTimeout(() => {
@@ -71,6 +67,7 @@ const mobileMenu = document.querySelector('.mobile-menu');
 const headerNav = document.querySelector('.header__nav');
 
 mobileMenu.onclick = () => {
+    document.body.classList.toggle('active')
     mobileMenu.classList.toggle('active')
     headerNav.classList.toggle('active')
     mobileMenu.classList.contains('active') ? mobileMenu.innerHTML = 'закрыть' : mobileMenu.innerHTML = 'МЕНЮ';

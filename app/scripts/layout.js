@@ -26,10 +26,6 @@
 
 var stitle = document.querySelector('title');
 var title2Interval = void 0;
-// let titleText = stitle.innerText;
-// let textArr = titleText.split('');
-// let textArrSlice = textArr.slice(0, 3);
-// console.log(textArrSlice);
 
 var titleInterval = setInterval('stitle.innerText = \'(-).(o)\'', 2000);
 setTimeout(function () {
@@ -71,6 +67,7 @@ var mobileMenu = document.querySelector('.mobile-menu');
 var headerNav = document.querySelector('.header__nav');
 
 mobileMenu.onclick = function () {
+    document.body.classList.toggle('active');
     mobileMenu.classList.toggle('active');
     headerNav.classList.toggle('active');
     mobileMenu.classList.contains('active') ? mobileMenu.innerHTML = 'закрыть' : mobileMenu.innerHTML = 'МЕНЮ';

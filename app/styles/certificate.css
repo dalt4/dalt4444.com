@@ -96,55 +96,60 @@ footer {
   height: 200vh; }
 
 .montain {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: url("../img/certificate/motain/m_1.png") no-repeat center;
-  background-size: cover;
-  z-index: 0; }
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url("../img/certificate/montain/m_1.png") no-repeat center;
+    background-size: cover;
+    z-index: 0;
+}
 
 .montain2 {
-  top: unset;
-  left: unset;
-  right: 0;
-  bottom: 0;
-  background: url("../img/certificate/motain/m_2.png") no-repeat 100% 100%;
-  background-size: 45% auto;
-  z-index: 2; }
+    top: unset;
+    left: unset;
+    right: 0;
+    bottom: 0;
+    background: url("../img/certificate/montain/m_2.png") no-repeat 100% 100%;
+    background-size: 45% auto;
+    z-index: 2;
+}
 
 .montain3 {
-  top: unset;
-  left: 0;
-  bottom: 0;
-  background: url("../img/certificate/motain/m_3.png") no-repeat 0 100%;
-  z-index: 3;
-  background-size: 100% auto; }
+    top: unset;
+    left: 0;
+    bottom: 0;
+    background: url("../img/certificate/montain/m_3.png") no-repeat 0 100%;
+    z-index: 3;
+    background-size: 100% auto;
+}
 
 .fog {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: url("../img/certificate/motain/fog_1.png") no-repeat center;
-  background-size: cover;
-  z-index: 4; }
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url("../img/certificate/montain/fog_1.png") no-repeat center;
+    background-size: cover;
+    z-index: 4;
+}
 
 .fog2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: url("../img/certificate/motain/fog_2.png") 0 0/100vw;
-  -webkit-animation: fog2 infinite 60s forwards linear;
-          animation: fog2 infinite 60s forwards linear;
-  -webkit-filter: blur(50%);
-          filter: blur(50%);
-  opacity: .5;
-  z-index: 4; }
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url("../img/certificate/montain/fog_2.png") 0 0/100vw;
+    -webkit-animation: fog2 infinite 60s forwards linear;
+    animation: fog2 infinite 60s forwards linear;
+    -webkit-filter: blur(50%);
+    filter: blur(50%);
+    opacity: .5;
+    z-index: 4;
+}
 
 @-webkit-keyframes fog2 {
   from {
@@ -159,11 +164,12 @@ footer {
     background-position: 100vw 0; } }
 
 .content {
-  position: relative;
-  margin-top: -120vh;
-  margin-bottom: 25vh;
-  width: 100%;
-  z-index: 1; }
+    position: relative;
+    margin-top: -100vh;
+    margin-bottom: 25vh;
+    width: 100%;
+    z-index: 1;
+}
 
 .cert {
   position: relative;
@@ -261,16 +267,32 @@ footer {
   background: url("../img/certificate/certificates/23(191126js).jpg") no-repeat 0 0/100%; }
 
 @media screen and (max-width: 767px) {
-  footer {
-    position: relative;
-    -webkit-transform: none;
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: auto;
+        z-index: 10;
+        -webkit-transition: .4s all linear;
+        -o-transition: .4s all linear;
+        transition: .4s all linear;
+    }
+
+    footer {
+        position: relative;
+        -webkit-transform: none;
         -ms-transform: none;
-            transform: none; }
-  .zoomInDown {
-    -webkit-transform: none;
+        transform: none;
+    }
+
+    .zoomInDown {
+        -webkit-transform: none;
         -ms-transform: none;
-            transform: none; }
-  .aboutCert {
+        transform: none;
+    }
+
+    .aboutCert {
     font-size: 18px; }
   .cert {
     width: 80vw;

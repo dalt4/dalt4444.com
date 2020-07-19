@@ -85,7 +85,7 @@ footer {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url("../img/certificate/motain/m_1.png") no-repeat center;
+  background: url("../img/certificate/montain/m_1.png") no-repeat center;
   background-size: cover;
   z-index: 0;
 }
@@ -95,7 +95,7 @@ footer {
   left: unset;
   right: 0;
   bottom: 0;
-  background: url("../img/certificate/motain/m_2.png") no-repeat 100% 100%;
+  background: url("../img/certificate/montain/m_2.png") no-repeat 100% 100%;
   background-size: 45% auto;
   z-index: 2;
 }
@@ -104,7 +104,7 @@ footer {
   top: unset;
   left: 0;
   bottom: 0;
-  background: url("../img/certificate/motain/m_3.png") no-repeat 0 100%;
+  background: url("../img/certificate/montain/m_3.png") no-repeat 0 100%;
   z-index: 3;
   background-size: 100% auto;
 }
@@ -115,7 +115,7 @@ footer {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url("../img/certificate/motain/fog_1.png") no-repeat center;
+  background: url("../img/certificate/montain/fog_1.png") no-repeat center;
   background-size: cover;
   z-index: 4;
 }
@@ -126,7 +126,7 @@ footer {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url("../img/certificate/motain/fog_2.png") 0 0/ 100vw;
+  background: url("../img/certificate/montain/fog_2.png") 0 0/ 100vw;
   animation: fog2 infinite 60s forwards linear;
   filter: blur(50%);
   opacity: .5;
@@ -144,7 +144,7 @@ footer {
 
 .content {
   position: relative;
-  margin-top: -120vh;
+  margin-top: -100vh;
   margin-bottom: 25vh;
   width: 100%;
   z-index: 1;
@@ -270,6 +270,17 @@ footer {
 //-------------------------------------media 767px-------------------------------------------------------------------//
 
 @media screen and (max-width: 767px) {
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    z-index: 10;
+    transition: .4s all linear;
+  }
+
   footer {
     position: relative;
     transform: none;

@@ -1,4 +1,11 @@
 const body = document.querySelector('body');
+const indexHeader = document.querySelector('.header');
+const header__intro = document.querySelector('.header__intro');
+
+//------------------------------------------------mobil header--------------------------------------------------------//
+
+body.style.paddingTop = window.innerWidth <= 767 ? indexHeader.clientHeight + 'px' : '';
+
 
 //-----------------------------------------------main header and flag-------------------------------------------------//
 
@@ -24,7 +31,6 @@ window.onscroll = () => {
     pageYOffset > 100 ? mainHeader.classList.add('active') : mainHeader.classList.remove('active');
     pageYOffset > 0 ? mainFlag.classList.add('active') : mainFlag.classList.remove('active');
 }
-
 
 // Scroll to anchors
 (() => {
@@ -260,31 +266,32 @@ replay3.onclick = () => {
 
 //---------------------------------------------book-------------------------------------------------------------------//
 
-const bookItem = document.querySelector('.book-item');
-const bookScene = document.querySelector('.book-scene');
-const bookItemFront = document.querySelector('.book-item__front');
+let bookItem = document.querySelector('.book-item');
+let bookScene = document.querySelector('.book-scene');
+let bookItemFront = document.querySelector('.book-item__front');
 
 function createFlipbook() {
-    const flipTemplate = document.querySelector('#flip-template');
-    const clone = document.importNode(flipTemplate.content, true);
+    let flipTemplate = document.querySelector('#flip-template');
+    let clone = document.importNode(flipTemplate.content, true);
     bookItemFront.appendChild(clone);
     $('#flipbook').turn();
-    bookScene.onmouseleave = () => {
+    bookScene.onmouseleave = function () {
         $('#flipbook').turn('page', 1);
-        bookItem.style.left = ''
+        bookItem.style.left = '';
     };
-    $("#flipbook").bind("turned", function (event, page, view) {
-        bookItem.style.left = page === 1 ? '' : '10vw'
+    $("#flipbook").bind("turned", function (event, page) {
+        bookItem.style.left = (page === 1) ? '' : (() => {
+            return window.innerWidth <= 767 ? '20vw' : '10vw';
+        })()
     });
 }
 
 createFlipbook();
 
-window.onresize = () => {
+window.onresize = function () {
     $("#flipbook").turn("destroy").remove();
-    createFlipbook()
-}
-
+    createFlipbook();
+};
 
 //---------------------------------------------video-bg-------------------------------------------------------------------//
 

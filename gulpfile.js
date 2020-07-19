@@ -5,36 +5,72 @@ const gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     babel = require('gulp-babel'),
     uglify = require('gulp-uglify'),
-    htmlmin = require('gulp-htmlmin'),
     browserSync = require('browser-sync');
 sass.compiler = require('node-sass');
 
 //----------------------gulp image-------------------------//
 
-gulp.task('img', () =>
-    gulp.src('app/img/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('dist/img'))
+function image(nameG, src, dist) {
+    gulp.task(nameG, () =>
+        gulp.src(src)
+            .pipe(imagemin())
+            .pipe(gulp.dest(dist))
+    );
+}
+
+image('img', 'app/img/*', 'dist/img')
+image('certificate', 'app/img/certificate/certificates/*', 'dist/img/certificate/certificates/')
+image('certificateMontain', 'app/img/certificate/montain/*', 'dist/img/certificate/montain/')
+image('main', 'app/img/main/*', 'dist/img/main/')
+image('mainAnimation1', 'app/img/main/animation1/*', 'dist/img/main/animation1/')
+image('mainAnimation2', 'app/img/main/animation2/*', 'dist/img/main/animation2/')
+gulp.task('mainAnimation3', () =>
+    gulp.src('app/img/main/animation3/**/*')
+        .pipe(gulp.dest('dist/img/main/animation3/'))
 );
+image('mainAnimation4', 'app/img/main/animation4/*', 'dist/img/main/animation4/')
+image('book', 'app/img/main/book/*', 'dist/img/main/book/')
+image('slider1', 'app/img/main/slider1/*', 'dist/img/main/slider1/')
+image('slider2', 'app/img/main/slider2/*', 'dist/img/main/slider2/')
+gulp.task('mainVideo', () =>
+    gulp.src('app/img/main/video/*')
+        .pipe(gulp.dest('dist/img/main/video/'))
+);
+image('portfolio', 'app/img/portfolio/*', 'dist/img/portfolio/')
+image('img', 'app/img/*', 'dist/img')
+image('img', 'app/img/*', 'dist/img')
+image('img', 'app/img/*', 'dist/img')
+
+gulp.task('allImage', gulp.parallel('img', 'certificate', 'certificateMontain', 'main', 'mainAnimation1',
+    'mainAnimation2', 'mainAnimation3', 'mainAnimation4', 'book', 'mainVideo', 'portfolio'));
 
 //----------------------gulp build------------------------//
 
-gulp.task('html', () =>
-    gulp.src('app/*.html')
-        .pipe(htmlmin({collapseWhitespace: true}))
+gulp.task('appAll', () =>
+    gulp.src('app/*')
         .pipe(gulp.dest('dist'))
 );
 
 gulp.task('css', () =>
-    gulp.src('app/*.css')
+    gulp.src('app/styles/*.css')
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/styles/'))
 );
 
 gulp.task('uglify', () =>
-    gulp.src('app/script.js')
+    gulp.src('app/scripts/*.js')
         .pipe(uglify())
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/scripts/'))
+);
+
+gulp.task('modules', () =>
+    gulp.src('app/scripts/modules/*.js')
+        .pipe(gulp.dest('dist/scripts/modules/'))
+);
+
+gulp.task('templates', () =>
+    gulp.src('app/templates/*')
+        .pipe(gulp.dest('dist/templates/'))
 );
 
 gulp.task('fonts', () =>
@@ -47,13 +83,7 @@ gulp.task('libs', () =>
         .pipe(gulp.dest('dist/libs'))
 );
 
-gulp.task('svg', () =>
-    gulp.src('app/img/svg/*')
-        .pipe(gulp.dest('dist/img/svg'))
-);
-
-
-gulp.task('build', gulp.parallel('html', 'css', 'uglify', 'fonts', 'libs', 'svg'));
+gulp.task('build', gulp.parallel('appAll', 'css', 'uglify', 'modules', 'templates', 'fonts', 'libs'));
 
 //--------------------gulp default------------------------//
 gulp.task('browser-sync', function () {

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../styles/layout.css">
 </head>
 <body>
+<?= $page === 'order' ? '' : '<a href="order.php" class="orderForever">сделать заказ</a>' ?>
+<a href="" class="mobile__scroll-up js-scroll"></a>
 <header class="header">
     <div class="wrapper">
         <div class="header__content">
@@ -30,12 +32,12 @@
                     <div class="header__nav-bone <?= $page === 'certificates' ? '' : 'hide' ?>"></div>
                 </div>
                 <div class="heder__nav-item button">
-                    <a href="#" class="header__nav-link">ОБО МНЕ</a>
+                    <a href="about.php" class="header__nav-link">ОБО МНЕ</a>
                     <div class="header__nav-bone <?= $page === 'about' ? '' : 'hide' ?>"></div>
                     <div class="maitres2"></div>
                 </div>
                 <div class="heder__nav-item button" style="position:relative;">
-                    <a href="#" class="header__nav-link">ЗАКАЗАТЬ</a>
+                    <a href="order.php" class="header__nav-link">ЗАКАЗАТЬ</a>
                     <div class="header__nav-bone <?= $page === 'order' ? '' : 'hide' ?>"></div>
                     <div class="maitres"></div>
                 </div>

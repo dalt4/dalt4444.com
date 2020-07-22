@@ -40,7 +40,7 @@ function getElapsedTime(timer, start) {
         return i;
     }
 
-    timer.innerText = years + (years < 5 && years > 1 ? ' года ' : years < 2 ? ' год ' : ' лет ') + days + (days.toString().slice(-1) < 5 && days.toString().slice(-1) > 1 ? ' дня ' : days.toString().slice(-1) < 2 ? ' день ' : ' дней ') + hours + ':' + minutes + ':' + seconds + '::' + mseconds;
+    timer.innerText = years + (years < 5 && years > 1 ? ' года ' : years === 1 ? ' год ' : ' лет ') + days + (days.toString().slice(-1) < 5 && days.toString().slice(-1) > 1 ? ' дня ' : days.toString().slice(-1) === '1' ? ' день ' : ' дней ') + hours + ':' + minutes + ':' + seconds + '::' + mseconds;
 }
 
 setInterval(function () {

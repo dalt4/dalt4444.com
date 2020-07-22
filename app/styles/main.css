@@ -815,10 +815,14 @@
   padding: 5px; }
 
 .page__content img {
-  max-width: 95%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin: auto 0; }
+    max-width: 95%;
+    width: 95%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin: auto 0;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
 
 .flipbook__page3,
 .flipbook__page13,
@@ -1825,6 +1829,10 @@
 
     .main__content section.main__slick {
         margin-bottom: 50px;
+    }
+
+    .main__slick-container-wrapper {
+        padding-top: 100%;
     }
 
     .main__animation-item {

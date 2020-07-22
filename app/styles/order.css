@@ -4,7 +4,7 @@
 }
 
 .order__nav-items {
-    min-height: 100vh;
+    min-height: 80vh;
     width: 100%;
     height: 100%;
     display: -webkit-box;
@@ -25,6 +25,13 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-transition: .4s linear;
+    -o-transition: .4s linear;
+    transition: .4s linear;
+}
+
+.order__nav-items.active {
+    min-height: 700px;
 }
 
 .order__nav-item,
@@ -86,6 +93,26 @@
     text-align: center;
 }
 
+.order__list input[type='number']::-webkit-input-placeholder {
+    color: lightgrey;
+}
+
+.order__list input[type='number']::-moz-placeholder {
+    color: lightgrey;
+}
+
+.order__list input[type='number']:-ms-input-placeholder {
+    color: lightgrey;
+}
+
+.order__list input[type='number']::-ms-input-placeholder {
+    color: lightgrey;
+}
+
+.order__list input[type='number']::placeholder {
+    color: lightgrey;
+}
+
 .order__list span,
 .order__list sup {
     color: red;
@@ -97,8 +124,8 @@
 
 .order__close-item {
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 12.5px;
+    right: 12.5px;
     height: 25px;
     width: 25px;
     -webkit-transform-origin: center;
@@ -166,13 +193,13 @@
 
 .order__form fieldset {
     margin: 10px 10px 40px;
-    width: 400px;
+    width: 350px;
     border: double;
 }
 
 .order__form-wishes {
     border: double;
-    min-width: 400px;
+    min-width: 350px;
     min-height: 150px;
     height: auto;
     padding: 10px;

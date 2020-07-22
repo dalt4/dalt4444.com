@@ -42,7 +42,7 @@ image('img', 'app/img/*', 'dist/img')
 image('img', 'app/img/*', 'dist/img')
 
 gulp.task('allImage', gulp.parallel('img', 'certificate', 'certificateMontain', 'main', 'mainAnimation1',
-    'mainAnimation2', 'mainAnimation3', 'mainAnimation4', 'book', 'mainVideo', 'portfolio'));
+    'mainAnimation2', 'mainAnimation3', 'mainAnimation4', 'book', 'slider1', 'slider2', 'mainVideo', 'portfolio'));
 
 //----------------------gulp build------------------------//
 
@@ -88,7 +88,7 @@ gulp.task('build', gulp.parallel('appAll', 'css', 'uglify', 'modules', 'template
 //--------------------gulp default------------------------//
 gulp.task('browser-sync', function () {
     browserSync.init({
-        proxy: 'dalt4444.com',
+        proxy: 'dalt.app',
         notify: false
     });
 });

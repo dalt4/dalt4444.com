@@ -258,13 +258,24 @@ footer {
   background: url("../img/certificate/certificates/20(191016PHP).jpg") no-repeat 0 0/100%; }
 
 .cert21 {
-  background: url("../img/certificate/certificates/21(191016testgeekBrain).jpg") no-repeat 0 0/100%; }
+    background: url("../img/certificate/certificates/21(191016testgeekBrain).jpg") no-repeat 0 0/100%;
+}
 
 .cert22 {
-  background: url("../img/certificate/certificates/22(191103VasiliyAnikin155887).jpg") no-repeat 0 0/100%; }
+    background: url("../img/certificate/certificates/22(191103VasiliyAnikin155887).jpg") no-repeat 0 0/100%;
+}
 
 .cert23 {
-  background: url("../img/certificate/certificates/23(191126js).jpg") no-repeat 0 0/100%; }
+    background: url("../img/certificate/certificates/23(191126js).jpg") no-repeat 0 0/100%;
+}
+
+.cert24 {
+    background: url("../img/certificate/certificates/24(webinar-seo ).jpg") no-repeat 0 0/100%;
+}
+
+.cert25 {
+    background: url("../img/certificate/certificates/25(promopult 19-05-2020).jpg") no-repeat 0 0/100%;
+}
 
 @media screen and (max-width: 767px) {
     .header {
@@ -293,10 +304,16 @@ footer {
     }
 
     .aboutCert {
-    font-size: 18px; }
-  .cert {
-    width: 80vw;
-    height: 56vw; }
-  .certV {
-    width: 56vw;
-    height: 80vw; } }
+        font-size: 18px;
+    }
+
+    .cert {
+        width: 80vw;
+        height: 56vw;
+    }
+
+    .certV {
+        width: 56vw;
+        height: 80vw;
+    }
+}

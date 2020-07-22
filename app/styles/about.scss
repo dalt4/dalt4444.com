@@ -167,3 +167,16 @@
   font-weight: 300;
 }
 
+//-------------------------------------media 767px-------------------------------------------------------------------//
+
+@media screen and (max-width: 767px) {
+  .about__resume_timer-web {
+    margin: 0;
+
+  }
+
+  .about__picture {
+    margin-bottom: 25px;
+  }
+}
+

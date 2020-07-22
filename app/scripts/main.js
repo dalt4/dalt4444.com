@@ -29,6 +29,10 @@ window.onscroll = function () {
     pageYOffset > 0 ? mainFlag.classList.add('active') : mainFlag.classList.remove('active');
 };
 
+mainFlag.onclick = function () {
+    mainFlag.classList.add('active');
+};
+
 // Scroll to anchors
 (function () {
 
@@ -70,6 +74,13 @@ window.onscroll = function () {
 
 //--------------------------------------------------slick-------------------------------------------------------------//
 
+var sliderPictures = document.querySelectorAll('.main__slick-pic');
+var srcArray = ["../img/main/slider1/corvette-mob1-1.jpg", "../img/main/slider1/corvette-mob2-1.jpg", "../img/main/slider1/corvette-mob3-1.jpg"];
+
+window.innerWidth <= 767 ? sliderPictures.forEach(function (item, i) {
+    item.setAttribute('src', srcArray[i]);
+}) : '';
+
 $('.main__slick-slider').slick({
     autoplay: false,
     autoplaySpeed: 5000,
@@ -89,7 +100,9 @@ var fullScreenButtons = document.querySelectorAll('.fullScreen');
 
 animationItems.forEach(function (item, i) {
     item.onmouseleave = function () {
-        return animationCovers[i].style.top = '0';
+        animationCovers[i].style.top = '0';
+        var canvas = item.querySelector('canvas');
+        canvas ? canvas.remove() : '';
     };
 });
 

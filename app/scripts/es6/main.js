@@ -32,6 +32,10 @@ window.onscroll = () => {
     pageYOffset > 0 ? mainFlag.classList.add('active') : mainFlag.classList.remove('active');
 }
 
+mainFlag.onclick = () => {
+    mainFlag.classList.add('active')
+}
+
 // Scroll to anchors
 (() => {
 
@@ -74,6 +78,17 @@ window.onscroll = () => {
 
 //--------------------------------------------------slick-------------------------------------------------------------//
 
+const sliderPictures = document.querySelectorAll('.main__slick-pic');
+const srcArray = [
+    "../img/main/slider1/corvette-mob1-1.jpg",
+    "../img/main/slider1/corvette-mob2-1.jpg",
+    "../img/main/slider1/corvette-mob3-1.jpg"
+]
+
+window.innerWidth <= 767 ? sliderPictures.forEach((item, i) => {
+    item.setAttribute('src', srcArray[i])
+}) : '';
+
 $('.main__slick-slider').slick({
     autoplay: false,
     autoplaySpeed: 5000,
@@ -92,7 +107,11 @@ const animationCoverButtons = document.querySelectorAll('.animation-item__cover-
 const fullScreenButtons = document.querySelectorAll('.fullScreen');
 
 animationItems.forEach((item, i) => {
-    item.onmouseleave = () => animationCovers[i].style.top = '0';
+    item.onmouseleave = () => {
+        animationCovers[i].style.top = '0';
+        const canvas = item.querySelector('canvas');
+        canvas ? canvas.remove() : '';
+    };
 });
 
 animationCovers.forEach((item) => {

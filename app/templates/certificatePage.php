@@ -40,6 +40,8 @@
                 <div class="cert cert21"></div>
                 <div class="cert certV cert22"></div>
                 <div class="cert cert23"></div>
+                <div class="cert certV cert24"></div>
+                <div class="cert certV cert25"></div>
             </div>
         </div>
     </div>

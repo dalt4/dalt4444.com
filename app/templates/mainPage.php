@@ -191,27 +191,27 @@
                                                 </li>
                                                 <li class="book-contents-item">
                                                     <span>второе поколение</span>
-                                                    <span>стр2</span>
+                                                    <span>стр3</span>
                                                 </li>
                                                 <li class="book-contents-item">
                                                     <span>третье поколение</span>
-                                                    <span>стр2</span>
+                                                    <span>стр4</span>
                                                 </li>
                                                 <li class="book-contents-item">
                                                     <span>четвертое поколение</span>
-                                                    <span>стр2</span>
+                                                    <span>стр5</span>
                                                 </li>
                                                 <li class="book-contents-item">
                                                     <span>пятое поколение</span>
-                                                    <span>стр2</span>
+                                                    <span>стр6</span>
                                                 </li>
                                                 <li class="book-contents-item">
                                                     <span>шестое поколение</span>
-                                                    <span>стр2</span>
+                                                    <span>стр7</span>
                                                 </li>
                                                 <li class="book-contents-item">
                                                     <span>седьмое поколение</span>
-                                                    <span>стр2</span>
+                                                    <span>стр8</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -220,49 +220,49 @@
                                         <div class="page__content">
                                             <p>ПЕРВОЕ ПОКОЛЕНИЕ</p>
                                             <p>1953 - 1962</p>
-                                            <img src="../img/main/book/corvette-c1-1960.jpg" alt="1960">
+                                            <img src="../img/main/book/corvette-c1-1960-1.jpg" alt="1960">
                                         </div>
                                     </div>
                                     <div class="flipbook__page7">
                                         <div class="page__content">
                                             <p>ВТОРОЕ ПОКОЛЕНИЕ</p>
                                             <p>1963 - 1967</p>
-                                            <img src="../img/main/book/chevrolet-1963.jpg" alt="1966">
+                                            <img src="../img/main/book/chevrolet-1963-1.jpg" alt="1966">
                                         </div>
                                     </div>
                                     <div class="flipbook__page8">
                                         <div class="page__content">
                                             <p>ТРЕТЬЕ ПОКОЛЕНИЕ</p>
                                             <p>1968 - 1982</p>
-                                            <img src="../img/main/book/stingray.jpg" alt="1966">
+                                            <img src="../img/main/book/stingray-1.jpg" alt="1966">
                                         </div>
                                     </div>
                                     <div class="flipbook__page9">
                                         <div class="page__content">
                                             <p>ЧЕТВЕРТОЕ ПОКОЛЕНИЕ</p>
                                             <p>1983 - 1996</p>
-                                            <img src="../img/main/book/1987.jpg" alt="1966">
+                                            <img src="../img/main/book/1987-1.jpg" alt="1966">
                                         </div>
                                     </div>
                                     <div class="flipbook__page10">
                                         <div class="page__content">
                                             <p>ПЯТОЕ ПОКОЛЕНИЕ</p>
                                             <p>1997 - 2004</p>
-                                            <img src="../img/main/book/chevrolet_corvette_2000.jpg" alt="1966">
+                                            <img src="../img/main/book/chevrolet_corvette_2000-1.jpg" alt="1966">
                                         </div>
                                     </div>
                                     <div class="flipbook__page11">
                                         <div class="page__content">
                                             <p>ШЕСТОЕ ПОКОЛЕНИЕ</p>
                                             <p>2005 - 2013</p>
-                                            <img src="../img/main/book/2010-corvette.jpg" alt="1966">
+                                            <img src="../img/main/book/2010-corvette-1.jpg" alt="1966">
                                         </div>
                                     </div>
                                     <div class="flipbook__page12">
                                         <div class="page__content">
                                             <p>СЕДЬМОЕ ПОКОЛЕНИЕ</p>
                                             <p>2013 - НВ</p>
-                                            <img src="../img/main/book/2020-corvette-stingray.jpg" alt="1966">
+                                            <img src="../img/main/book/2020-corvette-stingray-1.jpg" alt="1966">
                                         </div>
                                     </div>
                                     <div class="flipbook__page13">

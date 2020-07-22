@@ -68,8 +68,8 @@
 .portfolio__site-info_description {
   position: absolute;
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: -10px;
+  //transform: translateX(-50%);
   width: 300px;
   height: 0;
   padding: 0;
@@ -94,8 +94,8 @@
   content: '';
   position: absolute;
   top: -10px;
-  left: 50%;
-  transform: translateX(-50%) rotateZ(-135deg);
+  left: 10px;
+  transform: rotateZ(-135deg);
   width: 20px;
   height: 20px;
   background: linear-gradient(-45deg, white, transparent 50%);

@@ -87,9 +87,10 @@
     -o-transition: .2s all ease-out;
     transition: .2s all ease-out;
     opacity: 0;
-  font-size: 0;
-  background: #232323;
-  z-index: 5; }
+    font-size: 0;
+    background: #232323;
+    z-index: 5;
+}
 
 .portfolio__site-info.active:hover .portfolio__site-info_description {
   height: auto;
@@ -234,22 +235,23 @@
           transform: translateY(-50%) translateX(-50%) translateZ(500px); }
 
 .portfolio__item:nth-child(2) {
-  -webkit-transform: translateY(-50%) translateX(-50%) rotateY(-webkit-calc(360deg / 5)) translateZ(500px);
-          transform: translateY(-50%) translateX(-50%) rotateY(calc(360deg / 5)) translateZ(500px); }
+    -webkit-transform: translateY(-50%) translateX(-50%) rotateY(72deg) translateZ(500px);
+    transform: translateY(-50%) translateX(-50%) rotateY(72deg) translateZ(500px);
+}
 
 .portfolio__item:nth-child(3) {
-    -webkit-transform: translateY(-50%) translateX(-50%) rotateY(-webkit-calc(360deg / 5 * 2)) translateZ(500px);
-    transform: translateY(-50%) translateX(-50%) rotateY(calc(360deg / 5 * 2)) translateZ(500px);
+    -webkit-transform: translateY(-50%) translateX(-50%) rotateY(144deg) translateZ(500px);
+    transform: translateY(-50%) translateX(-50%) rotateY(144deg) translateZ(500px);
 }
 
 .portfolio__item:nth-child(4) {
-    -webkit-transform: translateY(-50%) translateX(-50%) rotateY(-webkit-calc(360deg / 5 * 3)) translateZ(500px);
-    transform: translateY(-50%) translateX(-50%) rotateY(calc(360deg / 5 * 3)) translateZ(500px);
+    -webkit-transform: translateY(-50%) translateX(-50%) rotateY(216deg) translateZ(500px);
+    transform: translateY(-50%) translateX(-50%) rotateY(216deg) translateZ(500px);
 }
 
 .portfolio__item:nth-child(5) {
-    -webkit-transform: translateY(-50%) translateX(-50%) rotateY(-webkit-calc(360deg / 5 * 4)) translateZ(500px);
-    transform: translateY(-50%) translateX(-50%) rotateY(calc(360deg / 5 * 4)) translateZ(500px);
+    -webkit-transform: translateY(-50%) translateX(-50%) rotateY(288deg) translateZ(500px);
+    transform: translateY(-50%) translateX(-50%) rotateY(288deg) translateZ(500px);
 }
 
 @media screen and (max-width: 767px) {

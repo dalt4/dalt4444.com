@@ -49,7 +49,7 @@ setInterval(function () {
 }, 10);
 
 var resumeDescription__age = document.querySelector('.resume-description__age');
-resumeDescription__age.innerText = Math.floor((Math.floor(new Date().getTime()) - 178466400000) / (1000 * 60 * 60 * 24 * 365));
+resumeDescription__age.innerText = Math.floor((Math.floor(new Date().getTime()) - 178416000000) / (1000 * 60 * 60 * 24 * 365.25));
 
 //-----------------------------------------------------coin animate-------------------------------------------------//
 

@@ -1,14 +1,20 @@
 <main class="main">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet"
-          id="font-awesome-5-kit-css">
+    <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all"
+          rel="stylesheet">
     <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all"
-          rel="stylesheet" id="font-awesome-5-kit-css">
-    <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet"
-          id="font-awesome-5-kit-css">
+          rel="stylesheet">
+    <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
     <link rel="stylesheet" href="../styles/main.css">
+
+    <div class="mainPage__preloader">
+        <div id="particles-js"></div>
+        <script src=".././libs/particles.min.js"></script>
+    </div>
+
     <div class="main__header">
         <div class="wrapper">
+
             <div class="main__header-content">
                 <div class="main__header-logo"></div>
                 <div class="main__header-nav">
@@ -36,6 +42,7 @@
     </div>
 
     <div class="main__content">
+
 
         <!-- dot for smoothScroll -->
 
@@ -377,7 +384,7 @@
     <script src="../libs/three.min.js"></script>
     <script src="../libs/GLTFLoader.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="../libs/jquery.vide.min.js"></script>
     <script src="../libs/turn.min.js"></script>
     <script src="../scripts/main.js"></script>

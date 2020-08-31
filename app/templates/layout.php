@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Веб-разработчик</title>
+    <meta name="description"
+          content="Сайты под ключ. Редизайн, сопровождение и продвижение сайтов. Создание веб-анимации."/>
+    <meta name="keywords"
+          content="web programming,
+          сопровождение сайта,
+          ведение сайта,
+          администрирование сайта,
+          поддержка сайта компании,
+          поддержка веб сайта,
+          создание и сопровождение сайтов,
+          услуги по обслуживанию сайта,
+          комплексное обслуживание сайта,
+          Василий Аникин,
+          Василий Аникин разработка сайтов,
+          Василий Аникин сопровождение сайтов,
+          адаптивная верстка,
+          сайт разработка,
+          продвижение и создание сайтов,
+          разработка и продвижение сайта компании,
+          разработка индивидуальных сайтов,
+          разработка сайта индивидуально,
+          раскрутка сайта и создание,
+          услуги доработки сайтов "/>
     <link rel="stylesheet" href="../styles/layout.css">
 </head>
 <body>
@@ -92,5 +115,26 @@
     </div>
 </footer>
 <script src="../scripts/layout.js"></script>
+<!-- Yandex.Metrika counter -->
+<script>
+    (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        m[i].l = 1 * new Date();
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(57289888, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true
+    });
+</script>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/57289888" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 </html>

@@ -1649,6 +1649,10 @@ canvas {
     font-size: 3.4vw;
   }
 
+  .flipbook-title {
+    text-shadow: none;
+  }
+
   .book-scene:hover .book-item {
     transform: translateX(-50%);
   }

@@ -43,7 +43,7 @@
             </div>
             <nav class="header__nav">
                 <div class="heder__nav-item button">
-                    <a href="index.php" class="header__nav-link">ГЛАВНАЯ</a>
+                    <a href="/" class="header__nav-link">ГЛАВНАЯ</a>
                     <div class="header__nav-bone <?= $page === 'main' ? '' : 'hide' ?>"></div>
                 </div>
                 <div class="heder__nav-item button">

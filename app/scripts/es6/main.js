@@ -216,28 +216,19 @@ function animation1() {
     earthScene.appendChild(renderer.domElement);
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(20, earthScene.offsetWidth / earthScene.offsetHeight, .1, 5000);
+    const camera = new THREE.PerspectiveCamera(15, earthScene.offsetWidth / earthScene.offsetHeight, .1, 5000);
 
     camera.position.set(100, 250, 2000);
-    camera.rotation.y = 0;
-    camera.rotation.z = 0;
-    camera.rotation.x = 0;
 
-    const light1 = new THREE.AmbientLight(0xffffff, .1);
-    scene.add(light1);
-
-    const light = new THREE.PointLight(0xffffff, 1);
-    light.position.set(380, 250, 500);
+    const light = new THREE.DirectionalLight(0xffffff, .8);
+    light.position.set(100, 1000, 100);
     scene.add(light);
 
     const textureLoader = new THREE.TextureLoader();
-    const geometry = new THREE.SphereBufferGeometry(300, 50, 50);
-    const material = new THREE.MeshPhongMaterial({
-        shininess: 5,
+    const geometry = new THREE.SphereBufferGeometry(300, 100, 100);
+    const material = new THREE.MeshStandardMaterial({
         map: textureLoader.load('../img/main/animation1/earth_atmos_2048.jpg'),
-        specularMap: textureLoader.load('../img/main/animation1/earth_specular_2048.jpg'),
         normalMap: textureLoader.load('../img/main/animation1/earth_normal_2048.jpg'),
-        normalScale: new THREE.Vector2(0.85, 0.85)
     });
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
@@ -246,11 +237,12 @@ function animation1() {
     const material2 = new THREE.MeshPhongMaterial({
         transparent: true,
         map: textureLoader.load('../img/main/animation1/earth_clouds_2048.png'),
+        side: THREE.DoubleSide,
     });
     const mesh2 = new THREE.Mesh(geometry2, material2);
     scene.add(mesh2);
 
-    const loop = () => {
+    const animate = () => {
         camera.position.z > 500 ? camera.position.z-- : '';
         mesh.rotation.y += -.0005;
         mesh2.rotation.y += -.0005;
@@ -258,11 +250,11 @@ function animation1() {
         mesh2.rotation.z += -.00005;
         renderer.render(scene, camera);
         requestAnimationFrame(() => {
-            loop()
+            animate()
         })
     };
 
-    loop();
+    animate();
 }
 
 const replay1 = document.querySelector('.earth-scene .replay');

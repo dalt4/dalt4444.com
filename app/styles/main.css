@@ -779,7 +779,8 @@ canvas {
   font-size: 1.7vw;
   letter-spacing: .2vw;
   font-weight: 700;
-  text-shadow: -1px -1px #000, 0 1px 0 #444;
+  text-shadow: -1px -1px #000,
+ 0 1px 0 #444;
   padding-left: 1.4vw; }
 
 .flipbook-title::after {
@@ -1871,26 +1872,41 @@ canvas {
   .animation-clock__h-arrow {
     width: 1.2vw;
     height: 3.6vw; }
-  .animation-clock__m-arrow {
-    width: .4vw;
-    height: 4vw; }
-  .book-item {
-    -webkit-transform: translateX(-50%);
+
+    .animation-clock__m-arrow {
+        width: .4vw;
+        height: 4vw;
+    }
+
+    .book-item {
+        -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    width: 40vw;
-    height: 60vw;
-    font-size: 3.4vw; }
-  .book-scene:hover .book-item {
-    -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 40vw;
+        height: 60vw;
+        font-size: 3.4vw;
+    }
+
+    .flipbook-title {
+        text-shadow: none;
+    }
+
+    .book-scene:hover .book-item {
+        -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
-            transform: translateX(-50%); }
-  .book-item__flipbook {
-    width: 80vw;
-    height: 60vw; }
-  .book-item__side {
-    width: 60vw; }
-  .video__background {
+        transform: translateX(-50%);
+    }
+
+    .book-item__flipbook {
+        width: 80vw;
+        height: 60vw;
+    }
+
+    .book-item__side {
+        width: 60vw;
+    }
+
+    .video__background {
     height: 200vw;
     width: 100vw; }
   .buttons__box {

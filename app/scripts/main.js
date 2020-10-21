@@ -209,28 +209,19 @@ function animation1() {
     earthScene.appendChild(renderer.domElement);
 
     var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera(20, earthScene.offsetWidth / earthScene.offsetHeight, .1, 5000);
+    var camera = new THREE.PerspectiveCamera(15, earthScene.offsetWidth / earthScene.offsetHeight, .1, 5000);
 
     camera.position.set(100, 250, 2000);
-    camera.rotation.y = 0;
-    camera.rotation.z = 0;
-    camera.rotation.x = 0;
 
-    var light1 = new THREE.AmbientLight(0xffffff, .1);
-    scene.add(light1);
-
-    var light = new THREE.PointLight(0xffffff, 1);
-    light.position.set(380, 250, 500);
+    var light = new THREE.DirectionalLight(0xffffff, .8);
+    light.position.set(100, 1000, 100);
     scene.add(light);
 
     var textureLoader = new THREE.TextureLoader();
-    var geometry = new THREE.SphereBufferGeometry(300, 50, 50);
-    var material = new THREE.MeshPhongMaterial({
-        shininess: 5,
+    var geometry = new THREE.SphereBufferGeometry(300, 100, 100);
+    var material = new THREE.MeshStandardMaterial({
         map: textureLoader.load('../img/main/animation1/earth_atmos_2048.jpg'),
-        specularMap: textureLoader.load('../img/main/animation1/earth_specular_2048.jpg'),
-        normalMap: textureLoader.load('../img/main/animation1/earth_normal_2048.jpg'),
-        normalScale: new THREE.Vector2(0.85, 0.85)
+        normalMap: textureLoader.load('../img/main/animation1/earth_normal_2048.jpg')
     });
     var mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
@@ -238,12 +229,13 @@ function animation1() {
     var geometry2 = new THREE.SphereBufferGeometry(305, 50, 50);
     var material2 = new THREE.MeshPhongMaterial({
         transparent: true,
-        map: textureLoader.load('../img/main/animation1/earth_clouds_2048.png')
+        map: textureLoader.load('../img/main/animation1/earth_clouds_2048.png'),
+        side: THREE.DoubleSide
     });
     var mesh2 = new THREE.Mesh(geometry2, material2);
     scene.add(mesh2);
 
-    var loop = function loop() {
+    var animate = function animate() {
         camera.position.z > 500 ? camera.position.z-- : '';
         mesh.rotation.y += -.0005;
         mesh2.rotation.y += -.0005;
@@ -251,11 +243,11 @@ function animation1() {
         mesh2.rotation.z += -.00005;
         renderer.render(scene, camera);
         requestAnimationFrame(function () {
-            loop();
+            animate();
         });
     };
 
-    loop();
+    animate();
 }
 
 var replay1 = document.querySelector('.earth-scene .replay');

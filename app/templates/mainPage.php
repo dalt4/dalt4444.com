@@ -144,7 +144,7 @@
                         <h3 class="animation-item__title">
                             Стальной шар<br/>
                         </h3>
-                        <p class="animation-item__desc">Three.js + orbitControl</p>
+                        <p class="animation-item__desc">Three.js</p>
                         <div class="animation-item__cover-button ball__cover-button">ОТКРЫТЬ</div>
                     </div>
                     <div class="animation-item__scene ball-scene">
@@ -381,12 +381,10 @@
         </section>
     </div>
 
-    <script src="../libs/three.min.js"></script>
-    <script src="../libs/GLTFLoader.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="../libs/jquery.vide.min.js"></script>
     <script src="../libs/turn.min.js"></script>
     <script src="../scripts/main.js"></script>
-    <script type="module" src="../scripts/modules/dalt4444.module.js"></script>
+    <script type="module" src="../scripts/modules/script.module.js"></script>
 </main>

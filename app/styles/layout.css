@@ -21,23 +21,45 @@
 
 /* cormorant-garamond-700 - latin_cyrillic */
 @font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/cormorant-garamond-v7-latin_cyrillic-700.eot");
-  /* IE9 Compat Modes */
-  src: local("Cormorant Garamond Bold"), local("CormorantGaramond-Bold"), url("../fonts/cormorant-garamond-v7-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/cormorant-garamond-v7-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/cormorant-garamond-v7-latin_cyrillic-700.woff") format("woff"), url("../fonts/cormorant-garamond-v7-latin_cyrillic-700.ttf") format("truetype"), url("../fonts/cormorant-garamond-v7-latin_cyrillic-700.svg#CormorantGaramond") format("svg");
-  /* Legacy iOS */ }
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/cormorant-garamond-v7-latin_cyrillic-700.eot");
+    /* IE9 Compat Modes */
+    src: local("Cormorant Garamond Bold"), local("CormorantGaramond-Bold"), url("../fonts/cormorant-garamond-v7-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/cormorant-garamond-v7-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/cormorant-garamond-v7-latin_cyrillic-700.woff") format("woff"), url("../fonts/cormorant-garamond-v7-latin_cyrillic-700.ttf") format("truetype"), url("../fonts/cormorant-garamond-v7-latin_cyrillic-700.svg#CormorantGaramond") format("svg");
+    /* Legacy iOS */
+}
+
+::-webkit-scrollbar {
+    /* 1 - скроллбар */
+    width: 1px;
+    height: 1px;
+    background-color: black;
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar-button {
+    /* 2 - кнопка */
+    height: 0;
+    width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    /* 5 - ползунок */
+    border-radius: 1px;
+    background-color: rgba(255, 0, 0, 0.7);
+}
 
 html {
-  width: 100%;
-  height: 100%; }
+    width: 100%;
+    height: 100%;
+}
 
 body {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

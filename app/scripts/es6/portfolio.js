@@ -22,6 +22,9 @@ const descriptionSiteArray = [
     'Полная переделка сайта с Adobe muse'
 ];
 
+window.onload = () => scene__deck.classList.remove('invis');
+
+
 potfolio__siteLink.onclick = (e) => !potfolio__siteLink.classList.contains('active') ? e.preventDefault() : '';
 
 porfolio__navLinks.forEach((item, i) => {

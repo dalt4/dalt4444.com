@@ -12,6 +12,10 @@ var siteLinksArray = ['http://xn--80audjku.xn--p1acf/', 'https://avgm.kz/', 'htt
 
 var descriptionSiteArray = ['Полный цикл разработки от дизайна до размещения на хостинге', 'Полный цикл разработки от дизайна до размещения на хостинге', 'Верстка макета главной страницы из Figma + адаптив', 'Верстка главной страницы из PSD макета', 'Полная переделка сайта с Adobe muse'];
 
+window.onload = function () {
+    return scene__deck.classList.remove('invis');
+};
+
 potfolio__siteLink.onclick = function (e) {
     return !potfolio__siteLink.classList.contains('active') ? e.preventDefault() : '';
 };

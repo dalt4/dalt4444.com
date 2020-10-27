@@ -17,7 +17,7 @@
         </div>
         <div class="portfolio__scene">
 
-            <div class="scene__deck">
+            <div class="scene__deck invis">
                 <div class="portfolio__item">
                     <img src="../img/portfolio/taro.jpg" alt="portfolio" class="portfolio__item-pic">
                 </div>
